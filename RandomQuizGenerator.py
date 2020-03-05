@@ -64,19 +64,19 @@ for quizNum in range(35):
 
         quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1,
                states[questionNum]))
-        quizFile.write('\n')
+        quizFile.write('') # no ENTER after question!
 # for i in range(4):
 
         for i in range(4):
             quizFile.write((' ' * 5) +' %s. %s\n' % ('ABCD'[i], answerOptions[i]))
-            quizFile.write('\n')
+            quizFile.write('') # no ENTER after each question!! '' or '\n'
 
     
     # Write the answer key to a file.
 
         answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[
               answerOptions.index(correctAnswer)]))
-        answerKeyFile.write('\n')
+        answerKeyFile.write('') #enter \n betwen '' and answers will be seperated with ENTER
 
 quizFile.close()
 answerKeyFile.close()
